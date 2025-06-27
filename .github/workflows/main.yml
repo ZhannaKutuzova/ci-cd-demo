@@ -1,0 +1,16 @@
+name: CI Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Получить код из репозитория
+        uses: actions/checkout@v3
+
+      - name: Сказать привет
+        run: echo "✅ CI/CD запущено успешно!"
